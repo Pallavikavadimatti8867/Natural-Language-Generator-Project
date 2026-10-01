@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm: dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Starts the full-stack Express + React Vite application on http://localhost:3000"
+    },
+    {
+      "label": "npm: build",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": ["$tsc"],
+      "group": "build",
+      "detail": "Builds the React application for production"
+    },
+    {
+      "label": "python: run flask backend",
+      "type": "shell",
+      "command": "python3 backend/app.py",
+      "options": {
+        "cwd": "${workspaceFolder}/Data-Science-NLG"
+      },
+      "problemMatcher": [],
+      "detail": "Runs the Python Flask REST API backend on http://localhost:5000"
+    }
+  ]
+}

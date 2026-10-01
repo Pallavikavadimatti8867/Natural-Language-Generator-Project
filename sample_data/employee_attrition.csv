@@ -1,0 +1,22 @@
+EmployeeID,Department,Age,Monthly_Salary,Job_Satisfaction,Years_At_Company,Performance_Rating,Overtime_Hours,Attrition
+EMP101,Engineering,29,75000,4,3,3,15,No
+EMP102,Sales,34,58000,3,5,3,25,Yes
+EMP103,Marketing,41,89000,5,8,4,8,No
+EMP104,Engineering,26,62000,2,1,2,30,Yes
+EMP105,Human Resources,38,67000,4,6,3,5,No
+EMP106,Finance,45,115000,4,12,4,12,No
+EMP107,Sales,31,54000,2,2,2,35,Yes
+EMP108,Engineering,33,88000,5,6,4,10,No
+EMP109,Marketing,28,,3,2,3,18,No
+EMP110,Finance,52,135000,5,15,5,6,No
+EMP111,Human Resources,35,63000,3,4,3,8,No
+EMP112,Sales,40,72000,1,7,2,40,Yes
+EMP113,Engineering,30,82000,4,4,4,14,No
+EMP114,Marketing,36,79000,,5,3,12,No
+EMP115,Engineering,27,69000,3,2,3,22,No
+EMP116,Finance,48,124000,4,11,4,10,No
+EMP117,Sales,29,51000,2,1,2,28,Yes
+EMP118,Engineering,39,102000,5,9,5,8,No
+EMP104,Engineering,26,62000,2,1,2,30,Yes
+EMP119,Sales,32,60000,3,3,3,20,No
+EMP120,Human Resources,44,78000,4,8,3,4,No

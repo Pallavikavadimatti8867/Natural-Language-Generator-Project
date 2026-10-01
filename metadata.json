@@ -1,0 +1,8 @@
+{
+  "name": "Natural Language Generator for Data Analysis",
+  "description": "An AI-powered Data Science web application that analyzes structured datasets and automatically converts statistical results, patterns, trends, and visualizations into natural-language insights and comprehensive reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Full-Stack App (Express + React)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Run Python Flask Backend (Data-Science-NLG)",
+      "type": "python",
+      "request": "launch",
+      "module": "flask",
+      "cwd": "${workspaceFolder}/Data-Science-NLG/backend",
+      "env": {
+        "FLASK_APP": "app.py",
+        "FLASK_DEBUG": "1"
+      },
+      "args": ["run", "--port=5000", "--host=0.0.0.0"],
+      "jinja": true
+    },
+    {
+      "name": "Launch Chrome against localhost:3000",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

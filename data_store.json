@@ -1,0 +1,658 @@
+{
+  "users": [
+    {
+      "user_id": "usr_1790780176886_svq0l",
+      "name": "Pallavi Test",
+      "email": "pallavitest@datascience.studio",
+      "password_hash": "$2b$10$aNCMmrny2eHTRjXCj8D2few99K7iMI8CFPVu0meWfX3AnUQP6wT.C",
+      "registration_date": "2026-09-30T14:56:16.886Z",
+      "last_login": "2026-09-30T14:56:16.886Z"
+    },
+    {
+      "user_id": "usr_1790780458291_xbz8k",
+      "name": "Pallavi kavadimatti",
+      "email": "pallavisk46@gmail.com",
+      "password_hash": "$2b$10$PH5n8I.dCta9U4g8BHeu9./pwjey1aRXgNw56fzXT2iNwx30Gmx3y",
+      "registration_date": "2026-09-30T15:00:58.291Z",
+      "last_login": "2026-09-30T15:00:58.291Z"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "sample_1790780129125",
+      "user_id": "guest-user-default",
+      "name": "sales.csv",
+      "total_rows": 30,
+      "total_columns": 9,
+      "columns": [
+        "Date",
+        "Product_Category",
+        "Region",
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "numerical_columns": [
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "categorical_columns": [
+        "Date",
+        "Product_Category",
+        "Region"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T14:55:29.125Z"
+    },
+    {
+      "id": "sample_1790780192791",
+      "user_id": "guest-user-default",
+      "name": "employee_attrition.csv",
+      "total_rows": 20,
+      "total_columns": 9,
+      "columns": [
+        "EmployeeID",
+        "Department",
+        "Age",
+        "Monthly_Salary",
+        "Job_Satisfaction",
+        "Years_At_Company",
+        "Performance_Rating",
+        "Overtime_Hours",
+        "Attrition"
+      ],
+      "numerical_columns": [
+        "Age",
+        "Monthly_Salary",
+        "Job_Satisfaction",
+        "Years_At_Company",
+        "Performance_Rating",
+        "Overtime_Hours"
+      ],
+      "categorical_columns": [
+        "EmployeeID",
+        "Department",
+        "Attrition"
+      ],
+      "missing_values": 2,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T14:56:32.791Z"
+    },
+    {
+      "id": "sample_1790780242190",
+      "user_id": "guest-analyst",
+      "name": "sales.csv",
+      "total_rows": 30,
+      "total_columns": 9,
+      "columns": [
+        "Date",
+        "Product_Category",
+        "Region",
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "numerical_columns": [
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "categorical_columns": [
+        "Date",
+        "Product_Category",
+        "Region"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T14:57:22.190Z"
+    },
+    {
+      "id": "ds_1790780278130",
+      "user_id": "guest-analyst",
+      "name": "cleaned_filtered_sales_dataset.csv",
+      "total_rows": 10,
+      "total_columns": 6,
+      "columns": [
+        "ID",
+        "Product",
+        "Category",
+        "Sales",
+        "Quantity",
+        "Rating"
+      ],
+      "numerical_columns": [
+        "ID",
+        "Sales",
+        "Quantity",
+        "Rating"
+      ],
+      "categorical_columns": [
+        "Product",
+        "Category"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T14:57:58.130Z"
+    },
+    {
+      "id": "sample_1790780412859",
+      "user_id": "guest-analyst",
+      "name": "employee_attrition.csv",
+      "total_rows": 21,
+      "total_columns": 9,
+      "columns": [
+        "EmployeeID",
+        "Department",
+        "Age",
+        "Monthly_Salary",
+        "Job_Satisfaction",
+        "Years_At_Company",
+        "Performance_Rating",
+        "Overtime_Hours",
+        "Attrition"
+      ],
+      "numerical_columns": [
+        "Age",
+        "Monthly_Salary",
+        "Job_Satisfaction",
+        "Years_At_Company",
+        "Performance_Rating",
+        "Overtime_Hours"
+      ],
+      "categorical_columns": [
+        "EmployeeID",
+        "Department",
+        "Attrition"
+      ],
+      "missing_values": 2,
+      "duplicate_records": 1,
+      "uploaded_at": "2026-09-30T15:00:12.859Z"
+    },
+    {
+      "id": "ds_1790780927370",
+      "user_id": "usr_1790780458291_xbz8k",
+      "name": "cleaned_filtered_sales_dataset_export.csv",
+      "total_rows": 10,
+      "total_columns": 6,
+      "columns": [
+        "ID",
+        "Product",
+        "Category",
+        "Sales",
+        "Quantity",
+        "Rating"
+      ],
+      "numerical_columns": [
+        "ID",
+        "Sales",
+        "Quantity",
+        "Rating"
+      ],
+      "categorical_columns": [
+        "Product",
+        "Category"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T15:08:47.370Z"
+    },
+    {
+      "id": "ds_1790784424607",
+      "user_id": "guest-user-default",
+      "name": "sales.csv",
+      "total_rows": 30,
+      "total_columns": 9,
+      "columns": [
+        "Date",
+        "Product_Category",
+        "Region",
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "numerical_columns": [
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "categorical_columns": [
+        "Date",
+        "Product_Category",
+        "Region"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T16:07:04.607Z"
+    },
+    {
+      "id": "sample_1790784450081",
+      "user_id": "guest-analyst",
+      "name": "sales.csv",
+      "total_rows": 30,
+      "total_columns": 9,
+      "columns": [
+        "Date",
+        "Product_Category",
+        "Region",
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "numerical_columns": [
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "categorical_columns": [
+        "Date",
+        "Product_Category",
+        "Region"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T16:07:30.081Z"
+    },
+    {
+      "id": "ds_1790784628350",
+      "user_id": "guest-analyst",
+      "name": "cleaned_filtered_sales_dataset_export.csv",
+      "total_rows": 10,
+      "total_columns": 6,
+      "columns": [
+        "ID",
+        "Product",
+        "Category",
+        "Sales",
+        "Quantity",
+        "Rating"
+      ],
+      "numerical_columns": [
+        "ID",
+        "Sales",
+        "Quantity",
+        "Rating"
+      ],
+      "categorical_columns": [
+        "Product",
+        "Category"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T16:10:28.350Z"
+    },
+    {
+      "id": "sample_1790784745552",
+      "user_id": "guest-analyst",
+      "name": "employee_attrition.csv",
+      "total_rows": 21,
+      "total_columns": 9,
+      "columns": [
+        "EmployeeID",
+        "Department",
+        "Age",
+        "Monthly_Salary",
+        "Job_Satisfaction",
+        "Years_At_Company",
+        "Performance_Rating",
+        "Overtime_Hours",
+        "Attrition"
+      ],
+      "numerical_columns": [
+        "Age",
+        "Monthly_Salary",
+        "Job_Satisfaction",
+        "Years_At_Company",
+        "Performance_Rating",
+        "Overtime_Hours"
+      ],
+      "categorical_columns": [
+        "EmployeeID",
+        "Department",
+        "Attrition"
+      ],
+      "missing_values": 2,
+      "duplicate_records": 1,
+      "uploaded_at": "2026-09-30T16:12:25.552Z"
+    },
+    {
+      "id": "sample_1790784816107",
+      "user_id": "guest-user-default",
+      "name": "sales.csv",
+      "total_rows": 30,
+      "total_columns": 9,
+      "columns": [
+        "Date",
+        "Product_Category",
+        "Region",
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "numerical_columns": [
+        "Units_Sold",
+        "Unit_Price",
+        "Total_Sales",
+        "Discount_Percent",
+        "Customer_Rating",
+        "Profit_Margin"
+      ],
+      "categorical_columns": [
+        "Date",
+        "Product_Category",
+        "Region"
+      ],
+      "missing_values": 0,
+      "duplicate_records": 0,
+      "uploaded_at": "2026-09-30T16:13:36.107Z"
+    }
+  ],
+  "reports": [
+    {
+      "report_id": "rep_1790780166723",
+      "user_id": "guest-user-default",
+      "dataset_id": "sample_1790780129125",
+      "title": "Comprehensive Data Science & Natural Language Report: sales.csv",
+      "dataset_meta": {
+        "id": "sample_1790780129125",
+        "user_id": "guest-user-default",
+        "name": "sales.csv",
+        "total_rows": 30,
+        "total_columns": 9,
+        "columns": [
+          "Date",
+          "Product_Category",
+          "Region",
+          "Units_Sold",
+          "Unit_Price",
+          "Total_Sales",
+          "Discount_Percent",
+          "Customer_Rating",
+          "Profit_Margin"
+        ],
+        "numerical_columns": [
+          "Units_Sold",
+          "Unit_Price",
+          "Total_Sales",
+          "Discount_Percent",
+          "Customer_Rating",
+          "Profit_Margin"
+        ],
+        "categorical_columns": [
+          "Date",
+          "Product_Category",
+          "Region"
+        ],
+        "missing_values": 0,
+        "duplicate_records": 0,
+        "uploaded_at": "2026-09-30T14:55:29.125Z"
+      },
+      "data_quality": {
+        "score": 100,
+        "completeness": 100,
+        "missing_cells": 0,
+        "duplicate_rows": 0,
+        "observations": [
+          "Overall Data Quality Score: 100/100 with 100% total cell completeness.",
+          "Zero missing values identified across the dataset.",
+          "No duplicate records present."
+        ]
+      },
+      "statistics": {
+        "highlights": [
+          {
+            "column": "Units_Sold",
+            "mean": 76.13,
+            "median": 65,
+            "std": 46,
+            "min": 18,
+            "max": 175,
+            "narrative": "The dataset has an average Units_Sold of 76.13 (median: 65), with standard deviation of 46 spanning from 18 to 175."
+          },
+          {
+            "column": "Unit_Price",
+            "mean": 2023.67,
+            "median": 1200,
+            "std": 1591.15,
+            "min": 390,
+            "max": 5200,
+            "narrative": "The dataset has an average Unit_Price of 2,023.67 (median: 1,200), with standard deviation of 1,591.15 spanning from 390 to 5,200."
+          },
+          {
+            "column": "Total_Sales",
+            "mean": 94163.33,
+            "median": 97750,
+            "std": 25447.77,
+            "min": 54000,
+            "max": 141600,
+            "narrative": "The dataset has an average Total_Sales of 94,163.33 (median: 97,750), with standard deviation of 25,447.77 spanning from 54,000 to 141,600."
+          },
+          {
+            "column": "Discount_Percent",
+            "mean": 8.73,
+            "median": 8,
+            "std": 3.13,
+            "min": 5,
+            "max": 15,
+            "narrative": "The dataset has an average Discount_Percent of 8.73 (median: 8), with standard deviation of 3.13 spanning from 5 to 15."
+          },
+          {
+            "column": "Customer_Rating",
+            "mean": 4.41,
+            "median": 4.45,
+            "std": 0.34,
+            "min": 3.7,
+            "max": 4.9,
+            "narrative": "The dataset has an average Customer_Rating of 4.41 (median: 4.45), with standard deviation of 0.34 spanning from 3.7 to 4.9."
+          },
+          {
+            "column": "Profit_Margin",
+            "mean": 20.99,
+            "median": 21.75,
+            "std": 4.28,
+            "min": 13.5,
+            "max": 28,
+            "narrative": "The dataset has an average Profit_Margin of 20.99 (median: 21.75), with standard deviation of 4.28 spanning from 13.5 to 28."
+          }
+        ]
+      },
+      "correlations": {
+        "matrix": {
+          "Units_Sold": {
+            "Units_Sold": 1,
+            "Unit_Price": -0.847,
+            "Total_Sales": -0.573,
+            "Discount_Percent": 0.239,
+            "Customer_Rating": -0.016,
+            "Profit_Margin": -0.052
+          },
+          "Unit_Price": {
+            "Units_Sold": -0.847,
+            "Unit_Price": 1,
+            "Total_Sales": 0.631,
+            "Discount_Percent": 0.113,
+            "Customer_Rating": -0.37,
+            "Profit_Margin": -0.301
+          },
+          "Total_Sales": {
+            "Units_Sold": -0.573,
+            "Unit_Price": 0.631,
+            "Total_Sales": 1,
+            "Discount_Percent": -0.241,
+            "Customer_Rating": 0.25,
+            "Profit_Margin": 0.314
+          },
+          "Discount_Percent": {
+            "Units_Sold": 0.239,
+            "Unit_Price": 0.113,
+            "Total_Sales": -0.241,
+            "Discount_Percent": 1,
+            "Customer_Rating": -0.65,
+            "Profit_Margin": -0.709
+          },
+          "Customer_Rating": {
+            "Units_Sold": -0.016,
+            "Unit_Price": -0.37,
+            "Total_Sales": 0.25,
+            "Discount_Percent": -0.65,
+            "Customer_Rating": 1,
+            "Profit_Margin": 0.887
+          },
+          "Profit_Margin": {
+            "Units_Sold": -0.052,
+            "Unit_Price": -0.301,
+            "Total_Sales": 0.314,
+            "Discount_Percent": -0.709,
+            "Customer_Rating": 0.887,
+            "Profit_Margin": 1
+          }
+        },
+        "pairs": [
+          {
+            "col1": "Customer_Rating",
+            "col2": "Profit_Margin",
+            "correlation": 0.887,
+            "category": "Strong positive"
+          },
+          {
+            "col1": "Units_Sold",
+            "col2": "Unit_Price",
+            "correlation": -0.847,
+            "category": "Strong negative"
+          },
+          {
+            "col1": "Discount_Percent",
+            "col2": "Profit_Margin",
+            "correlation": -0.709,
+            "category": "Strong negative"
+          },
+          {
+            "col1": "Discount_Percent",
+            "col2": "Customer_Rating",
+            "correlation": -0.65,
+            "category": "Moderate negative"
+          },
+          {
+            "col1": "Unit_Price",
+            "col2": "Total_Sales",
+            "correlation": 0.631,
+            "category": "Moderate positive"
+          },
+          {
+            "col1": "Units_Sold",
+            "col2": "Total_Sales",
+            "correlation": -0.573,
+            "category": "Moderate negative"
+          },
+          {
+            "col1": "Unit_Price",
+            "col2": "Customer_Rating",
+            "correlation": -0.37,
+            "category": "Moderate negative"
+          },
+          {
+            "col1": "Total_Sales",
+            "col2": "Profit_Margin",
+            "correlation": 0.314,
+            "category": "Moderate positive"
+          },
+          {
+            "col1": "Unit_Price",
+            "col2": "Profit_Margin",
+            "correlation": -0.301,
+            "category": "Moderate negative"
+          },
+          {
+            "col1": "Total_Sales",
+            "col2": "Customer_Rating",
+            "correlation": 0.25,
+            "category": "Weak correlation"
+          },
+          {
+            "col1": "Total_Sales",
+            "col2": "Discount_Percent",
+            "correlation": -0.241,
+            "category": "Weak correlation"
+          },
+          {
+            "col1": "Units_Sold",
+            "col2": "Discount_Percent",
+            "correlation": 0.239,
+            "category": "Weak correlation"
+          },
+          {
+            "col1": "Unit_Price",
+            "col2": "Discount_Percent",
+            "correlation": 0.113,
+            "category": "Weak correlation"
+          },
+          {
+            "col1": "Units_Sold",
+            "col2": "Profit_Margin",
+            "correlation": -0.052,
+            "category": "Weak correlation"
+          },
+          {
+            "col1": "Units_Sold",
+            "col2": "Customer_Rating",
+            "correlation": -0.016,
+            "category": "Weak correlation"
+          }
+        ]
+      },
+      "key_insights": {
+        "trends": [
+          "Units_Sold shows sequential movement across sample rows with a standard deviation of 46."
+        ],
+        "correlations": [
+          "Customer_Rating and Profit_Margin demonstrate a strong positive (Pearson r = 0.887).",
+          "Units_Sold and Unit_Price demonstrate a strong negative (Pearson r = -0.847).",
+          "Discount_Percent and Profit_Margin demonstrate a strong negative (Pearson r = -0.709).",
+          "Discount_Percent and Customer_Rating demonstrate a moderate negative (Pearson r = -0.65).",
+          "Unit_Price and Total_Sales demonstrate a moderate positive (Pearson r = 0.631)."
+        ],
+        "category_comparisons": [
+          "Segment '2024-01-05' in 'Date' holds the majority share with 1 records (3.3%)."
+        ],
+        "outliers": [
+          "No extreme outliers detected beyond 1.5× IQR boundaries."
+        ]
+      },
+      "executive_summary": "The dataset 'sales.csv' consists of 30 records and 9 features (6 numerical, 3 categorical). Data completeness is evaluated at 100%, conferring a quality rating of 100/100. Key statistical indicators show distinct distributional properties across primary metrics.",
+      "ai_recommendations": [
+        "Perform targeted imputation or removal on incomplete columns to avoid bias in machine learning pipelines.",
+        "Treat detected outliers through Tukey fence clipping to stabilize downstream regression and clustering models.",
+        "Leverage strongly correlated feature pairs for predictive forecasting and dimensional reduction."
+      ],
+      "created_at": "2026-09-30T14:56:06.723Z"
+    }
+  ]
+}
