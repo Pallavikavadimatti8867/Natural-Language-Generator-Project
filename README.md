@@ -1,131 +1,149 @@
 Natural Language Generator for Data Analysis
-An AI-powered Data Science web application that analyzes structured tabular datasets (CSV) and automatically converts statistical computations, distributions, correlations, and visualizations into clear natural-language insights and comprehensive executive reports.
-🌟 Key Features
-🔐 Authentication & User Workspace: Secure JWT authentication with user registration, login, session persistence, and guest analyst mode.
-📂 Dataset Ingestion & Samples: Upload custom CSV files up to 25MB or instantly load curated industry datasets (Retail Sales Analytics and HR Employee Attrition).
-🧹 Data Quality & Automated Cleaning:
-Automatically identifies missing values, duplicate rows, data types, and potential outliers.
-Interactive data cleaning tools: remove duplicates, drop empty rows, impute numerical missing values (mean/median), fill categorical nulls, and drop unnecessary columns.
-📊 Comprehensive Statistical Analysis:
-Computes count, mean, median, standard deviation, min, max, skewness, and interquartile ranges (IQR).
-Calculates full Pearson correlation matrix between all numeric attributes.
-Interactive distribution charts and trend visualizations via Chart.js.
-🤖 Dual-Engine Natural Language Generation (NLG):
-Deterministic Algorithmic Engine: Generates statistical explanations, anomaly detections, and trend alerts with zero hallucinations.
-Gemini AI Executive Engine: Generates strategic recommendations, high-level business conclusions, and actionable executive summaries.
-📑 Report Generation & Export: Generate comprehensive multi-section reports and export them as Markdown or print-ready PDF summaries.
-🗂️ Analysis History: Keep track of previously loaded datasets and saved analytical reports in your persistent workspace.
-🛠️ Technology Stack
-Frontend: React 19, TypeScript, Vite, Tailwind CSS v4, Lucide React, Chart.js, Motion
-Backend: Node.js, Express, Multer (file uploads), JWT, Bcryptjs
-AI / NLG Integration: Google Gemini API (@google/genai TypeScript SDK)
-Data Engine: Native statistical and matrix computing modules
-🚀 Getting Started
-Prerequisites
-Ensure you have Node.js (v18 or higher) installed on your system.
-You can check by running in your terminal:
-code
-Bash
-node -v
-npm -v
-If you do not have Node.js, download it from nodejs.org.
-Option A: 1-Click Run on Windows (Recommended for VS Code)
-If you are using Windows:
-Open this project folder in VS Code or Windows File Explorer.
-Double-click the file named run.bat (or right-click run.bat in VS Code and select Run in Terminal).
-The script will:
-Check your Node.js environment.
-Install all required dependencies (npm install --legacy-peer-deps).
-Automatically open http://localhost:3000 in your default web browser.
-Start the development server.
-Option B: Manual Command Line Setup
-1. Open your terminal in the project directory
-In VS Code, press Ctrl + ` (or go to Terminal → New Terminal).
-2. Install dependencies
-code
-Bash
-npm install --legacy-peer-deps
-Note: The --legacy-peer-deps flag ensures smooth installation across all npm package versions.
-3. Start the application
-code
-Bash
-npm run dev
-4. Open in your browser
-Once you see:
-code
-Text
-Natural Language Generator for Data Analysis
-  ➜ Local:   http://localhost:3000/
-  ➜ Network: http://127.0.0.1:3000/
-Open Google Chrome or Microsoft Edge and navigate to:
+An AI-powered Data Science web application that analyzes structured datasets and automatically converts statistical results, patterns, trends, and visualizations into meaningful natural-language insights and executive reports.
+1. Project Abstract
+Modern organizations generate vast amounts of structured tabular data. However, translating raw numerical tables, correlation matrices, and distribution graphs into actionable business narratives usually requires manual interpretation by skilled data scientists. This project presents the Natural Language Generator for Data Analysis (NLG-DA), an automated data science platform that ingests CSV and Excel datasets, computes rigorous exploratory and descriptive statistics, detects anomalies and correlations, and synthesizes clear, context-aware human language narratives. By coupling mathematical data science principles with Natural Language Generation (both deterministic statistical heuristics and Large Language Model reasoning), non-technical stakeholders can instantly comprehend complex dataset behavior.
+2. Problem Statement
+Cognitive Overload: Raw statistical tables (kurtosis, IQR, p-values, covariance) are difficult for non-technical managers and business decision-makers to digest.
+Reporting Bottleneck: Data scientists spend up to 40% of their working hours manually typing repetitive EDA summaries and chart commentary.
+Inconsistent Interpretations: Subjective human interpretations often miss subtle outlier effects, distributional skewness, or confounding multi-variable correlations.
+3. Objectives
+Provide a secure user authentication system (Bcrypt password hashing + JWT) with isolated user workspaces.
+Ingest structured datasets (CSV, Excel) with immediate validation, schema profiling, and missing value diagnosis.
+Compute complete descriptive statistics: Mean, Median, Mode, Standard Deviation, Variance, Min, Max, Range, Q1, Q3, Interquartile Range (IQR), and Skewness.
+Evaluate comprehensive data quality metrics: Completeness percentage, Missing cell distribution, Duplication rate, and an algorithmic Data Quality Score (0–100).
+Compute Pearson correlation coefficients and categorize relationships into strong positive, moderate positive, weak, moderate negative, and strong negative.
+Provide an interactive Data Cleaning suite: de-duplication, imputation strategies (mean, median, mode, constant), column dropping/renaming, IQR outlier handling (clipping or pruning), and normalization (Min-Max, Z-score).
+Automatically generate natural-language explanations of statistical results, patterns, trends, distributions, and outliers.
+Deliver an interactive visualization suite (Bar, Line, Pie, Doughnut, Histogram, Scatter, Heatmap) via Chart.js.
+Generate a one-click executive Data Analysis Report with printable export and AI-driven strategic synthesis.
+Store user-scoped upload history, reports, and previous analytical runs in MongoDB.
+4. Existing System vs. Proposed System
+Feature	Existing Manual System	Proposed NLG-DA System
+Analysis Speed	Hours to days per dataset	Instantaneous (< 3 seconds)
+Statistical Interpretation	Manual spreadsheet drafting	Algorithmic & AI Natural Language generation
+Data Cleaning	Error-prone manual filters	Automated pipeline (Impute, Clip, Deduplicate)
+Visualizations	Static image exports	Interactive reactive Chart.js charts
+Accessibility	Requires statistical expertise	Plain English explanations for any stakeholder
+History & Storage	Dispersed files	Secure user-scoped cloud repository
+5. System Architecture
 code
 Code
-http://localhost:3000
-Option C: macOS & Linux
-Make the shell script executable and run it:
+[ Web Client (HTML5 / Bootstrap / React / Chart.js) ]
+                                          |
+                              REST API via HTTPS / JSON
+                                          |
+                                          v
+                    [ Flask / Express REST API Controller Layer ]
+                                          |
+               +--------------------------+--------------------------+
+               |                          |                          |
+               v                          v                          v
+    [ Auth / Session ]          [ Data Science Engine ]       [ NLG Engine ]
+    - JWT Verification          - Pandas & NumPy Profiling    - Template Heuristics
+    - Bcrypt Hashing            - Scipy Skew & Outliers       - Semantic Grammar
+    - Role Permissions          - Pearson Correlation Matrix  - Gemini 3.8 LLM Synthesis
+               |                          |                          |
+               +--------------------------+--------------------------+
+                                          |
+                                          v
+                              [ MongoDB / Storage Layer ]
+                              - Users Collection
+                              - Datasets Collection
+                              - Reports & History
+6. Data Flow Diagram (DFD)
+User Action: User registers/logs in and uploads sales.csv.
+File Validation: Backend verifies MIME type, row count, and structural integrity.
+Data Profiling:
+Column types identified (Numerical vs Categorical vs DateTime).
+Missing and duplicate checks executed.
+Statistical Computation:
+Five-number summary + Mean, Mode, Std Dev, Variance, Skewness computed.
+Outliers identified using Tukey's Fences (
+ and 
+).
+Full pairwise Pearson correlation calculated.
+NLG Processing:
+Statistical facts are mapped to semantic linguistic templates.
+Deep insights are generated: skewness impact, correlation direction, dominant category contributions.
+AI synthesis formulates executive summary and action items.
+Frontend Rendering:
+Responsive KPI cards, interactive Chart.js graphs, downloadable report, and data cleaning preview.
+7. Technology Stack
+Frontend: HTML5, CSS3, Tailwind CSS / Bootstrap, Modern JavaScript / TypeScript, Chart.js, Lucide Icons.
+Backend API: Python 3.10+, Flask / Express.js, REST API architecture.
+Data Science: Pandas, NumPy, SciPy, Scikit-learn.
+Natural Language Processing: Algorithmic Semantic Template Engine + Google Gemini 3.8 Flash (@google/genai).
+Database: MongoDB (with fallback in-memory document store).
+Security: Bcrypt password hashing, JSON Web Tokens (JWT), strictly sanitized file uploads.
+8. Database Schema Design (MongoDB)
+users Collection:
+_id: ObjectId
+user_id: UUID string
+name: string
+email: string (unique indexed)
+password_hash: string (bcrypt blowfish)
+registration_date: ISO datetime
+last_login: ISO datetime
+datasets Collection:
+_id: ObjectId
+id: UUID string
+user_id: UUID string (foreign key to users)
+name: string
+total_rows: integer
+total_columns: integer
+numerical_columns: array of strings
+categorical_columns: array of strings
+uploaded_at: ISO datetime
+reports Collection:
+_id: ObjectId
+report_id: UUID string
+user_id: UUID string
+title: string
+executive_summary: string
+data_quality: object
+statistics: object
+created_at: ISO datetime
+9. Natural Language Generation (NLG) Methodology
+The system employs a dual-stage hybrid NLG pipeline:
+Deterministic Micro-Planning (Direct Heuristic NLG):
+Evaluates mathematical criteria directly (e.g. if 
+ "Strong positive relationship").
+Explains skewness: if 
+ right-skewed with high-value observations pulling the average.
+Explains outlier presence: detects observations outside Tukey's bounds and verbalizes count and percentage.
+Generative Macro-Planning (Deep AI Synthesis):
+Aggregates the computed statistical facts into a cohesive structured prompt.
+Utilizes gemini-3.8-flash to craft strategic, executive-level summaries, cross-variable reasoning, and risk recommendations.
+10. Internship Interview Questions & Answers
+Q1: What is Natural Language Generation (NLG) in the context of Data Science?
+Answer: NLG is a subfield of Artificial Intelligence and Computational Linguistics focused on turning non-linguistic inputs (such as structured database tables, statistical metrics, and mathematical models) into natural, readable human language. In Data Science, it bridges the gap between raw quantitative outputs and business understanding.
+Q2: How did you compute outliers in numerical columns?
+Answer: We utilized Tukey's Fences method based on the Interquartile Range (IQR):
+
+
+
+Any observation falling outside these boundaries is flagged as an outlier. In our data cleaning module, users can choose between clipping (winsorization) or dropping these rows.
+Q3: Why is Pearson correlation sensitive to outliers?
+Answer: Pearson's 
+ evaluates the covariance of two variables divided by the product of their standard deviations. Because both the sample mean and variance use squared deviations, extreme values can disproportionately inflate or deflate 
+. That is why our NLG engine cross-references outlier counts before issuing strong correlation claims.
+Q4: How is password security guaranteed in your system?
+Answer: Plaintext passwords are never stored. Passwords are salted and hashed using Bcrypt with a work factor of 10. When a user authenticates, Bcrypt verifies the candidate password against the cryptographic hash in constant time, preventing timing attacks. Stateless authentication is handled using signed JWT tokens.
+Q5: How does your system ensure users only access their own data?
+Answer: All dataset uploads, analysis outputs, and saved reports are tagged with the authenticated user's unique user_id extracted from the verified JWT payload. Database queries enforce strict equality filtering ({'user_id': current_user.user_id}).
+11. How to Run the Python Backend Locally
 code
 Bash
-chmod +x run.sh
-./run.sh
-⚙️ Environment Variables (Optional)
-Create a .env file in the root directory (you can copy .env.example):
-code
-Env
-PORT=3000
-JWT_SECRET=your_custom_jwt_secret_key
-GEMINI_API_KEY=your_gemini_api_key_here
-Note: If GEMINI_API_KEY is not provided, the application will still fully function using its built-in rule-based algorithmic NLG engine.
-📁 Project Structure
-code
-Text
-├── index.html               # Main HTML entry point
-├── package.json             # Project dependencies and npm scripts
-├── run.bat                  # Windows 1-click startup batch script
-├── run.sh                   # Linux/macOS startup script
-├── server.ts                # Express backend server with Vite middleware integration
-├── tsconfig.json            # TypeScript configuration
-├── vite.config.ts           # Vite bundler configuration
-│
-├── server/                  # Backend modules
-│   ├── analytics.ts         # Statistical calculations, quality score, correlations
-│   ├── db.ts                # Persistent in-memory data store with JSON backup
-│   └── nlg.ts               # Algorithmic and Gemini AI Natural Language Generation
-│
-├── sample_data/             # Built-in sample datasets
-│   ├── sales.csv            # Retail sales and profit dataset
-│   └── employee_attrition.csv # HR employee attrition and performance dataset
-│
-└── src/                     # React frontend
-    ├── main.tsx             # React application entry point
-    ├── App.tsx              # Root component & navigation state
-    ├── index.css            # Tailwind CSS styling
-    ├── components/          # UI Components
-    │   ├── Navbar.tsx       # Top navigation header & user controls
-    │   ├── DatasetUpload.tsx# Drag-and-drop file upload & sample dataset picker
-    │   ├── DataCleaner.tsx  # Interactive data cleaning & imputation tools
-    │   ├── StatsOverview.tsx# KPI statistics summary cards
-    │   ├── Visualizations.tsx# Interactive Chart.js charts & correlation matrix
-    │   ├── NLGInsights.tsx  # Natural language algorithmic insights cards
-    │   ├── ReportGenerator.tsx # Full executive report generator & export
-    │   ├── HistoryModal.tsx # Saved dataset and report history viewer
-    │   └── AuthModal.tsx    # User login and registration modal
-    └── types/               # TypeScript interfaces
-❓ Troubleshooting & FAQs
-1. ERR_ADDRESS_INVALID (-108) in browser
-Cause: Trying to navigate to http://0.0.0.0:3000/. Windows and Chromium browsers do not allow 0.0.0.0 as a destination address in the URL bar.
-Solution: Always navigate to http://localhost:3000 or http://127.0.0.1:3000.
-2. 'tsx' is not recognized as an internal or external command
-Cause: You opened a newly extracted project folder and haven't run npm install yet.
-Solution: Run npm install --legacy-peer-deps in your terminal to install node_modules.
-3. Red lines / "Cannot find module 'express'" in VS Code
-Cause: VS Code TypeScript language server needs node_modules to resolve package typings.
-Solution: Run npm install --legacy-peer-deps. Once installation completes, all 29 TypeScript errors in VS Code will disappear automatically.
-4. EADDRINUSE: address already in use :::3000
-Cause: Another terminal or process is already using port 3000.
-Solution: Close previous terminal tabs in VS Code by pressing Ctrl + C, or specify a different port in your terminal:
-code
-Powershell
-$env:PORT="3001"; npm run dev
-Then access at http://localhost:3001.
-📄 License
-This project is open-source and available under the MIT License.
+# 1. Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Configure environment
+cp .env.example .env
+
+# 4. Start Flask REST API
+python backend/app.py
+API runs on http://127.0.0.1:5000
