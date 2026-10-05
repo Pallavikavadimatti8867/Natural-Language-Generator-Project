@@ -98,6 +98,7 @@ function parseCSV(text: string): { columns: string[]; rows: Record<string, any>[
 // Authentication Middleware
 interface AuthRequest extends Request {
   user?: { user_id: string; email: string; name: string };
+  file?: any;
 }
 
 function authenticateToken(req: AuthRequest, res: Response, next: NextFunction) {
@@ -727,10 +728,21 @@ async function startServer() {
     app.use(vite.middlewares);
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`\n  Natural Language Generator for Data Analysis`);
+  const server = app.listen(PORT, '0.0.0.0', () => {
+    console.log(`\n  ======================================================`);
+    console.log(`  🚀 Natural Language Generator for Data Analysis`);
     console.log(`  ➜ Local:   http://localhost:${PORT}/`);
-    console.log(`  ➜ Network: http://127.0.0.1:${PORT}/\n`);
+    console.log(`  ➜ Network: http://127.0.0.1:${PORT}/`);
+    console.log(`  ======================================================\n`);
+  });
+
+  server.on('error', (err: any) => {
+    if (err.code === 'EADDRINUSE') {
+      console.error(`\n[ERROR] Port ${PORT} is already in use by another terminal or process.`);
+      console.error(`Please press Ctrl+C in any old terminal to stop it, then try again.\n`);
+    } else {
+      console.error('Server error:', err);
+    }
   });
 }
 
